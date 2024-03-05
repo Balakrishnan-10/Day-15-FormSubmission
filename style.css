@@ -6,10 +6,20 @@
     font-family: 'Times New Roman', Times, serif;
     outline: none;
 }
+h2{
+    font-size: 50px;
+    padding:0%
+}
+
 form{
     background-color: white;
     padding: 30px;  
     margin: none;
+}
+label{
+    
+    font-size: 20px;
+    
 }
 input{
     background-color: #ecf0f3;

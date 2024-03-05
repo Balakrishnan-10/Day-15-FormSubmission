@@ -54,12 +54,12 @@ var br11 = break_create();
 var genin1 = document.createElement("label")
 genin1.innerHTML = "Male"
 var genin2 = input_create("input","type","radio","name","gender","value","Male");
-genin2.id = "gender"
+genin2.id = "male"
 
 var genin3 = document.createElement("label")
 genin3.innerHTML = "Female"
 var genin4 = input_create("input","type","radio","name","gender","value","Female");
-genin4.id = "gender1"
+genin4.id = "female"
 var br12 = break_create();
 
 
@@ -74,22 +74,22 @@ var br14 = break_create();
 
 var food02 = document.createElement("label")
 food02.innerHTML = "South Indian"
-var food2 = input_create("input","type","checkbox","id","box2","value","southindian");
+var food2 = input_create("input","type","checkbox","id","box2","value","Southindian");
 var br15 = break_create();
 
 var food03 = document.createElement("label")
 food03.innerHTML = "Chinese"
-var food3 = input_create("input","type","checkbox","id","box3","value","chinese");
+var food3 = input_create("input","type","checkbox","id","box3","value","Chinese");
 var br16 = break_create();
 
 var food04 = document.createElement("label")
 food04.innerHTML = "Japanese"
-var food4 = input_create("input","type","checkbox","id","box4","value","japanese");
+var food4 = input_create("input","type","checkbox","id","box4","value","Japanese");
 var br17 = break_create();
 
 var food05 = document.createElement("label")
 food05.innerHTML = "Sea Food";
-var food5 = input_create("input","type","checkbox","id","box5","value","sea food");
+var food5 = input_create("input","type","checkbox","id","box5","value","Sea food");
 var br18 = break_create();
 
 
@@ -105,7 +105,7 @@ var br22 = break_create();
 var br23 = break_create();
 var button = document.createElement("button");
 button.setAttribute("type","button");
-button.setAttribute("onclick","foo()");
+button.setAttribute("onclick","check()");
 button.innerHTML = "Submit";
 
 form.append(head)
@@ -138,8 +138,6 @@ ele.innerHTML = content;
 return ele;
 }
 
-
-
 var thead_tr = create_tr();
 
 var th1 = create_th("th","scope","col","First Name");
@@ -163,19 +161,9 @@ div.append(table);
 table.append(thead)
 document.body.append(div)
 
-var list = [];
-var list1 = [];
-var list2 = [];
-var list3 = [];
-var list4 = [];
-var list5 = [];
-var list6 = [];
-var list7 = [];
+
  
-var a = 1;
-var b = 0;
- 
-function foo(){
+function check(){
 var Addrown = document.getElementById("main");
    NewRow = Addrown.insertRow(a);
 
@@ -183,10 +171,17 @@ var Addrown = document.getElementById("main");
  list1[b] = document.getElementById("lastname").value;
  list2[b] = document.getElementById("Address1","Address2").value;
  list3[b] = document.getElementById("pin").value;
- list4[b] = document.getElementById("gender","gender1").value;
- list5[b] = document.getElementById("box1","box2","box3","box4","box5").value;
  list6[b] = document.getElementById("State").value;
  list7[b] = document.getElementById("country").value;
+ list4[b] = document.querySelector('input[name="gender"]:checked')
+ if (check !==null){
+ 
+}
+list5[b] = document.querySelector('input[type="checkbox"]:checked');
+if (this.checked==2){
+ }
+ 
+
 
  cel1 = NewRow.insertCell(0);
  cel2 = NewRow.insertCell(1);
@@ -201,15 +196,25 @@ var Addrown = document.getElementById("main");
  cel2.innerHTML = list1[b];
  cel3.innerHTML = list2[b];
  cel4.innerHTML = list3[b];
- cel5.innerHTML = list4[b];
- cel6.innerHTML = list5[b];
+ cel5.innerHTML = list4[b].value;
+ cel6.innerHTML = list5[b].value;
  cel7.innerHTML = list6[b];
  cel8.innerHTML = list7[b];
 
  a++;
  b++;
 }
-
+var list = [];
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+var list5 = [];
+var list6 = [];
+var list7 = [];
+ 
+var a = 1;
+var b = 0;
 
 
 
